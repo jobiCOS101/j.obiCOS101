@@ -15,7 +15,7 @@ fn main(){
     if experience == "experienced" {
         if age >= 40 {
             println!("Your annual incentive is 1,560,000");
-        } else if 30 <= age && age <= 39{
+        } else if 30 >= age && age <= 39{
             println!("Your annual incentive is 1,480,000");
         } else if age <= 29 {
             println!("Your annual incentive is 1,380,000");
