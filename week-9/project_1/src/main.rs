@@ -9,7 +9,7 @@ fn main() {
   
    let mut file = File::create("Drinks.csv").expect("create failed");
 
-   file.write_all("lager, Stout, Alcoholic".as_bytes()).expect("write failed");
+   file.write_all("lager, Stout, Alcoholic\n".as_bytes()).expect("write failed");
 
    let mut index = 0;
     loop{
