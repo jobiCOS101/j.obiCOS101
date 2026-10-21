@@ -10,14 +10,20 @@ fn main() {
    let mut file = File::create("Drinks.csv").expect("create failed");
 
    file.write_all("lager, Stout, Alcoholic".as_bytes()).expect("write failed");
+
+   let mut index = 0;
     loop{
-        let mut index = 0;
         file.write_all(lager[index].as_bytes()).expect("write failed");
         file.write_all(",".as_bytes()).expect("write failed");
         file.write_all(stout[index].as_bytes()).expect("write failed");
         file.write_all(",".as_bytes()).expect("write failed");
         file.write_all(non_alcoholic[index].as_bytes()).expect("write fail");
         file.write_all("\n".as_bytes()).expect("write failed");
+
+        index += 1;
+        if index == 6{
+            break;
+        }
     }
 
 
